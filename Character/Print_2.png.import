@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lixdgt0pcwd3"
-path.s3tc="res://.godot/imported/Print_2.png-73563b3c78bc486ec4edae0d81f6aa3b.s3tc.ctex"
+path.s3tc="res://.godot/imported/Print_2.png-7c2a7b6f3015e4fed6c05f8fcd225a09.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Godot/Game/Character/Print_2.png"
-dest_files=["res://.godot/imported/Print_2.png-73563b3c78bc486ec4edae0d81f6aa3b.s3tc.ctex"]
+source_file="res://Character/Print_2.png"
+dest_files=["res://.godot/imported/Print_2.png-7c2a7b6f3015e4fed6c05f8fcd225a09.s3tc.ctex"]
 
 [params]
 

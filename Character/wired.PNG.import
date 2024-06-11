@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bah5g5qrswv4m"
-path="res://.godot/imported/wired.PNG-71b68589b50cde6a9b4dd92e0ffef4a7.ctex"
+path="res://.godot/imported/wired.PNG-2ec1ff8adfb57195a19f19d227bb9bb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Godot/Game/Character/wired.PNG"
-dest_files=["res://.godot/imported/wired.PNG-71b68589b50cde6a9b4dd92e0ffef4a7.ctex"]
+source_file="res://Character/wired.PNG"
+dest_files=["res://.godot/imported/wired.PNG-2ec1ff8adfb57195a19f19d227bb9bb0.ctex"]
 
 [params]
 
