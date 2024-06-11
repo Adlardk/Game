@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://dfv27yv6w2k3h"]
+
+[ext_resource type="PackedScene" uid="uid://dw3gr0h68ev2m" path="res://character 9.47.28 AM 9.48.24 AM.tscn" id="1_l4nft"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6u8gp"]
+albedo_color = Color(0.247059, 0.431373, 0.0745098, 1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_2tx6x"]
+material = SubResource("StandardMaterial3D_6u8gp")
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w031t"]
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r6ugv"]
+sky_top_color = Color(0.239216, 0.462745, 0.678431, 1)
+sky_horizon_color = Color(0.623529, 0.776471, 0.933333, 1)
+sky_curve = 0.0609191
+ground_horizon_color = Color(0.623529, 0.776471, 0.933333, 1)
+ground_curve = 0.00500002
+
+[sub_resource type="Sky" id="Sky_3og2a"]
+sky_material = SubResource("ProceduralSkyMaterial_r6ugv")
+
+[sub_resource type="Environment" id="Environment_7jepi"]
+background_mode = 2
+sky = SubResource("Sky_3og2a")
+ambient_light_color = Color(0.709804, 0.709804, 0.709804, 1)
+ambient_light_sky_contribution = 0.75
+
+[node name="Level_main" type="Node3D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.241557, 0)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("BoxMesh_2tx6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_w031t")
+
+[node name="Sun_Light" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.720079, 0.693892, 0, -0.693892, 0.720079, 0, 7.31403, 6.65191)
+
+[node name="Character" parent="." instance=ExtResource("1_l4nft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.549559, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7jepi")
