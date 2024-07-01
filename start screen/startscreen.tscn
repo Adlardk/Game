@@ -6,43 +6,38 @@
 font_names = PackedStringArray("OCR A Std")
 
 [sub_resource type="SystemFont" id="SystemFont_7gnmb"]
-font_names = PackedStringArray("Microsoft Uighur")
+font_names = PackedStringArray("Microsoft Uighur", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "")
 
 [node name="Startscreen" type="Node2D"]
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-metadata/_edit_use_anchors_ = true
-
 [node name="Label2" type="Label" parent="."]
 z_index = 1
-offset_left = 186.0
-offset_top = 9.0
-offset_right = 966.0
-offset_bottom = 100.0
+offset_left = 425.0
+offset_top = -4.0
+offset_right = 1553.0
+offset_bottom = 127.0
 theme_override_colors/font_color = Color(0, 0.560784, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("SystemFont_dqvjy")
-theme_override_font_sizes/font_size = 90
+theme_override_font_sizes/font_size = 130
 text = "recovery run"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="."]
 z_index = 1
-offset_left = 485.0
-offset_top = 113.0
-offset_right = 737.0
-offset_bottom = 154.0
+offset_left = 718.0
+offset_top = 131.0
+offset_right = 1288.0
+offset_bottom = 279.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.67451, 0.129412, 1)
 theme_override_fonts/font = SubResource("SystemFont_7gnmb")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 90
 text = "made by Luca and Kiki"
 horizontal_alignment = 1
 
 [node name="RealBackround" type="Sprite2D" parent="."]
-position = Vector2(578.5, 322.5)
-scale = Vector2(3.90816, 4.47183)
+position = Vector2(1181, 690)
+scale = Vector2(8.03061, 9.6831)
 texture = ExtResource("1_mosmy")
