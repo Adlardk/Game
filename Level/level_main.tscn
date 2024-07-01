@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfv27yv6w2k3h"]
+[gd_scene load_steps=9 format=3 uid="uid://dfv27yv6w2k3h"]
 
 [ext_resource type="PackedScene" uid="uid://dw3gr0h68ev2m" path="res://character 9.47.28 AM 9.48.24 AM.tscn" id="1_l4nft"]
+[ext_resource type="PackedScene" uid="uid://no27b3arurrv" path="res://coin.tscn" id="2_hpdhb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6u8gp"]
 albedo_color = Color(0.247059, 0.431373, 0.0745098, 1)
@@ -50,3 +51,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.549559, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_7jepi")
+
+[node name="Coin" parent="." instance=ExtResource("2_hpdhb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.658338, -2.39591)
