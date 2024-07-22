@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://37cml2l7s2p"]
+[gd_scene load_steps=6 format=3 uid="uid://37cml2l7s2p"]
 
 [ext_resource type="Texture2D" uid="uid://bubp3mg8l0grs" path="res://start screen/assets/real backround.PNG" id="1_lmaf4"]
 [ext_resource type="Script" path="res://start screen/main_menu2.0/main_menu.gd" id="1_nhfp0"]
+[ext_resource type="PackedScene" uid="uid://hip0g63on748" path="res://start screen/options menu/options_menu.tscn" id="3_tiftn"]
 
 [sub_resource type="SystemFont" id="SystemFont_dnh72"]
 font_names = PackedStringArray("MV Boli")
@@ -90,3 +91,7 @@ layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_bvo84")
 theme_override_font_sizes/font_size = 33
 text = "[ Exit ]"
+
+[node name="Options_Menu" parent="." instance=ExtResource("3_tiftn")]
+visible = false
+layout_mode = 1
