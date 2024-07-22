@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://btq61lotw8rm8"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_wdtmh"]
+[ext_resource type="PackedScene" uid="uid://dqxklwmnnd1yf" path="res://terrain_controller.tscn" id="3_wx8hf"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0jbap"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_i6rfp"]
+sky_material = SubResource("ProceduralSkyMaterial_0jbap")
+
+[sub_resource type="Environment" id="Environment_nvigw"]
+background_mode = 2
+sky = SubResource("Sky_i6rfp")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8fuf1"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_c063k"]
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nvigw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 1.25142, 0)
+shadow_enabled = true
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.1, 2.08165e-12)
+script = ExtResource("1_wdtmh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_8fuf1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("CapsuleMesh_c063k")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+
+[node name="Camera_Controller" type="Node3D" parent="Player/Camera3D"]
+top_level = true
+
+[node name="Camera_Target" type="Node3D" parent="Player/Camera3D/Camera_Controller"]
+transform = Transform3D(1, 0, 0, 0, 0.818371, 0.574691, 0, -0.574691, 0.818371, 0, 4.48224, 3.93667)
+
+[node name="Camera3D" type="Camera3D" parent="Player/Camera3D/Camera_Controller/Camera_Target"]
+transform = Transform3D(1, 0, 0, 0, 0.973655, 0.228028, 0, -0.228028, 0.973655, 0, 2.0458, 0.301684)
+current = true
+
+[node name="TerrainController" parent="." instance=ExtResource("3_wx8hf")]
