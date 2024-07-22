@@ -2,18 +2,18 @@
 
 [ext_resource type="Script" path="res://character.gd" id="1_i7m23"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_tkp1n"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_621gq"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_0do3q"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_up6ij"]
 
 [node name="Character" type="CharacterBody3D"]
 script = ExtResource("1_i7m23")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_tkp1n")
+mesh = SubResource("CapsuleMesh_621gq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_0do3q")
+shape = SubResource("CapsuleShape3D_up6ij")
 
 [node name="Camera_Controller" type="Node3D" parent="."]
 top_level = true
@@ -22,5 +22,5 @@ top_level = true
 transform = Transform3D(1, 0, 0, 0, 0.87322, 0.487326, 0, -0.487326, 0.87322, 0, 1.86775, 3.66983)
 
 [node name="Camera3D" type="Camera3D" parent="Camera_Controller/Camera_Target"]
-transform = Transform3D(1, 0, 0, 0, 0.996149, -0.0876774, 0, 0.0876773, 0.996149, 0, -0.00164473, -0.487061)
+transform = Transform3D(1, 0, 0, 0, 0.973655, 0.228028, 0, -0.228028, 0.973655, 0, 0.996221, -0.435366)
 current = true
