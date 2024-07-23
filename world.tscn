@@ -7,12 +7,12 @@
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-[sub_resource type="Sky" id="Sky_i6rfp"]
+[sub_resource type="Sky" id="Sky_4qn0f"]
 sky_material = SubResource("ProceduralSkyMaterial_0jbap")
 
 [sub_resource type="Environment" id="Environment_nvigw"]
 background_mode = 2
-sky = SubResource("Sky_i6rfp")
+sky = SubResource("Sky_4qn0f")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -25,30 +25,21 @@ glow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nvigw")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D1" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 1.25142, 0)
 shadow_enabled = true
 
-[node name="Player" type="CharacterBody3D" parent="."]
+[node name="Player1" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.1, 2.08165e-12)
 script = ExtResource("1_wdtmh")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+[node name="CollisionShape3D1" type="CollisionShape3D" parent="Player1"]
 shape = SubResource("CapsuleShape3D_8fuf1")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+[node name="MeshInstance3D1" type="MeshInstance3D" parent="Player1"]
 mesh = SubResource("CapsuleMesh_c063k")
 
-[node name="Camera3D" type="Camera3D" parent="Player"]
+[node name="Camera3D1" type="Camera3D" parent="Player1"]
+transform = Transform3D(1, 0, 0, 0, 0.89272, 0.450613, 0, -0.450613, 0.89272, 0, 3.04336, 3.44863)
 
-[node name="Camera_Controller" type="Node3D" parent="Player/Camera3D"]
-top_level = true
-
-[node name="Camera_Target" type="Node3D" parent="Player/Camera3D/Camera_Controller"]
-transform = Transform3D(1, 0, 0, 0, 0.818371, 0.574691, 0, -0.574691, 0.818371, 0, 4.48224, 3.93667)
-
-[node name="Camera3D" type="Camera3D" parent="Player/Camera3D/Camera_Controller/Camera_Target"]
-transform = Transform3D(1, 0, 0, 0, 0.973655, 0.228028, 0, -0.228028, 0.973655, 0, 2.0458, 0.301684)
-current = true
-
-[node name="TerrainController" parent="." instance=ExtResource("3_wx8hf")]
+[node name="TerrainController1" parent="." instance=ExtResource("3_wx8hf")]
