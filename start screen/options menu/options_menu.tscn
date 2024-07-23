@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://hip0g63on748"]
+[gd_scene load_steps=4 format=3 uid="uid://hip0g63on748"]
 
 [ext_resource type="Script" path="res://start screen/options menu/options_menu.gd" id="1_qlx6r"]
+[ext_resource type="PackedScene" uid="uid://cg8btn0omkow2" path="res://start screen/options menu/settings_tab_container.tscn" id="2_7nk8x"]
 
 [sub_resource type="SystemFont" id="SystemFont_hjlil"]
 font_names = PackedStringArray("Trajan Pro")
+subpixel_positioning = 0
 
 [node name="Options_Menu" type="Control"]
 layout_mode = 3
@@ -40,7 +42,11 @@ text = "Options"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Settings_Tab_Container" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_7nk8x")]
+layout_mode = 2
+size_flags_vertical = 3
+
 [node name="Exit_Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 10
+size_flags_vertical = 8
 text = "Exit"

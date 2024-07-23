@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dfv27yv6w2k3h"]
 
 [ext_resource type="PackedScene" uid="uid://dw3gr0h68ev2m" path="res://character 9.47.28 AM 9.48.24 AM.tscn" id="1_l4nft"]
-[ext_resource type="PackedScene" uid="uid://no27b3arurrv" path="res://coin.tscn" id="2_hpdhb"]
+[ext_resource type="PackedScene" path="res://coin.tscn" id="2_hpdhb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6u8gp"]
 albedo_color = Color(0.247059, 0.431373, 0.0745098, 1)
