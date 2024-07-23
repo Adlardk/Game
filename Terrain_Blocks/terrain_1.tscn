@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://s5p4pcy6onjw"]
+[gd_scene load_steps=6 format=3 uid="uid://s5p4pcy6onjw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3tf0"]
+albedo_color = Color(0.160784, 0.380392, 0.121569, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_kep6v"]
+material = SubResource("StandardMaterial3D_c3tf0")
 size = Vector2(30, 20)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lb6e8"]
@@ -11,10 +15,11 @@ data = PackedVector3Array(15, 0, 10, -15, 0, 10, 15, 0, -10, -15, 0, 10, -15, 0,
 [sub_resource type="BoxMesh" id="BoxMesh_8g6eo"]
 
 [node name="Terrain_0" type="MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.46994)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.15159)
 mesh = SubResource("PlaneMesh_kep6v")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.326629)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_lb6e8")
@@ -23,9 +28,11 @@ shape = SubResource("ConcavePolygonShape3D_lb6e8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.936031, 0.5, 5.81929)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Block_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190263, 0, -2.74131)
 shape = SubResource("BoxShape3D_k261n")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Block_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.169202, -2.38419e-07, -2.79656)
 mesh = SubResource("BoxMesh_8g6eo")
 
 [node name="Block_1" type="StaticBody3D" parent="."]
@@ -41,10 +48,11 @@ mesh = SubResource("BoxMesh_8g6eo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87465, 0.5, 4.16469)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Block_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24764, 2.38419e-07, -7.55703)
 shape = SubResource("BoxShape3D_k261n")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Block_2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43602, 0, -2.95411)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1572, 0, -7.45852)
 mesh = SubResource("BoxMesh_8g6eo")
 
 [node name="Block_3" type="StaticBody3D" parent="."]
