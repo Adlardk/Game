@@ -1,56 +1,56 @@
 [gd_scene load_steps=9 format=3 uid="uid://dfv27yv6w2k3h"]
 
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://dw3gr0h68ev2m" path="res://character 9.47.28 AM 9.48.24 AM.tscn" id="1_l4nft"]
 [ext_resource type="PackedScene" path="res://coin.tscn" id="2_hpdhb"]
-=======
-[ext_resource type="PackedScene" uid="uid://dqxklwmnnd1yf" path="res://terrain_controller.tscn" id="1_r5g4e"]
-[ext_resource type="Script" path="res://player.gd" id="2_n5ej8"]
->>>>>>> 191b118975212f21d248f241e3bef0400ad2bb8f
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hwgl5"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6u8gp"]
+albedo_color = Color(0.247059, 0.431373, 0.0745098, 1)
+roughness = 0.8
 
-[sub_resource type="Sky" id="Sky_20ous"]
-sky_material = SubResource("ProceduralSkyMaterial_hwgl5")
+[sub_resource type="BoxMesh" id="BoxMesh_2tx6x"]
+material = SubResource("StandardMaterial3D_6u8gp")
+size = Vector3(10, 0.5, 10)
 
-[sub_resource type="Environment" id="Environment_vrg8q"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_w031t"]
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r6ugv"]
+sky_top_color = Color(0.239216, 0.462745, 0.678431, 1)
+sky_horizon_color = Color(0.623529, 0.776471, 0.933333, 1)
+sky_curve = 0.0609191
+ground_horizon_color = Color(0.623529, 0.776471, 0.933333, 1)
+ground_curve = 0.00500002
+
+[sub_resource type="Sky" id="Sky_3og2a"]
+sky_material = SubResource("ProceduralSkyMaterial_r6ugv")
+
+[sub_resource type="Environment" id="Environment_7jepi"]
 background_mode = 2
-sky = SubResource("Sky_20ous")
-tonemap_mode = 2
-glow_enabled = true
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b3lnj"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_st2ct"]
-albedo_color = Color(0.713726, 0.709804, 0.443137, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_3u8ne"]
-material = SubResource("StandardMaterial3D_st2ct")
+sky = SubResource("Sky_3og2a")
+ambient_light_color = Color(0.709804, 0.709804, 0.709804, 1)
+ambient_light_sky_contribution = 0.75
+ssr_enabled = true
 
 [node name="Level_main" type="Node3D"]
 
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.241557, 0)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("BoxMesh_2tx6x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_w031t")
+
+[node name="Sun_Light" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.720079, 0.693892, 0, -0.693892, 0.720079, 0, 7.31403, 6.65191)
+
+[node name="Character" parent="." instance=ExtResource("1_l4nft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.549559, 0)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_vrg8q")
+environment = SubResource("Environment_7jepi")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-shadow_enabled = true
-
-[node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.1, 2.08165e-12)
-script = ExtResource("2_n5ej8")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-shape = SubResource("CapsuleShape3D_b3lnj")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
-mesh = SubResource("CapsuleMesh_3u8ne")
-skeleton = NodePath("../CollisionShape3D")
-
-[node name="Camera3D" type="Camera3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 0.876357, 0.481662, 0, -0.481662, 0.876357, 0, 3.06233, 1.05581)
-fov = 109.2
-
-[node name="TerrainController" parent="." instance=ExtResource("1_r5g4e")]
+[node name="Coin" parent="." instance=ExtResource("2_hpdhb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.658338, -2.39591)
