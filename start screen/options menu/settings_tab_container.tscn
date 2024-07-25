@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://cg8btn0omkow2"]
+[gd_scene load_steps=3 format=3 uid="uid://cg8btn0omkow2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dbtp3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t4phu"]
 
 [node name="Settings_Tab_Container" type="Control"]
 layout_mode = 3
@@ -127,33 +131,13 @@ layout_mode = 2
 
 [node name="HSeparator" type="HSeparator" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-
-[node name="Label" type="Label" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "test
-"
-
-[node name="Label2" type="Label" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "test
-"
-
-[node name="Label3" type="Label" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "test
-"
-
-[node name="Label4" type="Label" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "test
-"
+theme_override_constants/separation = 25
+theme_override_styles/separator = SubResource("StyleBoxEmpty_dbtp3")
 
 [node name="HSeparator2" type="HSeparator" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 25
+theme_override_styles/separator = SubResource("StyleBoxEmpty_t4phu")
 
 [node name="accceibility" type="TabBar" parent="TabContainer"]
 visible = false
