@@ -40,6 +40,6 @@ shape = SubResource("CapsuleShape3D_d1mqv")
 mesh = SubResource("CapsuleMesh_4yoel")
 
 [node name="Camera3D" type="Camera3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 0.89272, 0.450613, 0, -0.450613, 0.89272, 0, 3.04336, 3.44863)
+transform = Transform3D(1, 0, 0, 0, 0.859736, 0.510738, 0, -0.510738, 0.859736, 0, 1.72283, 1.06815)
 
 [node name="TerrainController" parent="." instance=ExtResource("2_ckdnq")]

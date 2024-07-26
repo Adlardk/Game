@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dw7sdtquh5rvx"]
+[gd_scene load_steps=13 format=3 uid="uid://dw7sdtquh5rvx"]
+
+[ext_resource type="PackedScene" uid="uid://no27b3arurrv" path="res://coin.tscn" id="1_ec5r3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dufat"]
 albedo_color = Color(0.160784, 0.380392, 0.121569, 1)
@@ -13,6 +15,26 @@ data = PackedVector3Array(15, 0, 10, -15, 0, 10, 15, 0, -10, -15, 0, 10, -15, 0,
 [sub_resource type="BoxShape3D" id="BoxShape3D_k261n"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_8g6eo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o52ld"]
+size = Vector3(1, 1.5, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ir34"]
+albedo_color = Color(0.188235, 0.290196, 0.156863, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hdyhb"]
+material = SubResource("StandardMaterial3D_3ir34")
+size = Vector3(1, 1.5, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7pmfe"]
+size = Vector3(0.7, 1.5, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iprj4"]
+albedo_color = Color(0.458824, 0.34902, 0.25098, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7pho8"]
+material = SubResource("StandardMaterial3D_iprj4")
+size = Vector3(0.7, 1.5, 20)
 
 [node name="Terrain_0" type="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79662)
@@ -51,3 +73,71 @@ shape = SubResource("BoxShape3D_k261n")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Block_2"]
 mesh = SubResource("BoxMesh_8g6eo")
+
+[node name="Wall" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9866, -0.180901, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52, 1, 2.08165e-12)
+shape = SubResource("BoxShape3D_o52ld")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.512, 1, 2.08165e-12)
+mesh = SubResource("BoxMesh_hdyhb")
+
+[node name="Fence" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.13812, -0.266678, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_7pmfe")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Fence"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.08165e-12)
+mesh = SubResource("BoxMesh_7pho8")
+
+[node name="Coin" parent="." instance=ExtResource("1_ec5r3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.730378, 3.394)
+
+[node name="Coin2" parent="." instance=ExtResource("1_ec5r3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96304, 0.996128, -1.85949)
+
+[node name="Block_3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.29654, 0.550539, -4.66723)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block_3"]
+shape = SubResource("BoxShape3D_k261n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block_3"]
+mesh = SubResource("BoxMesh_8g6eo")
+skeleton = NodePath("../../Block_3")
+
+[node name="Block_4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98142, 0.622813, -4.92189)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block_4"]
+shape = SubResource("BoxShape3D_k261n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block_4"]
+mesh = SubResource("BoxMesh_8g6eo")
+skeleton = NodePath("../../Block_4")
+
+[node name="Block_5" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.61478, 0.601324, -5.51458)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block_5"]
+shape = SubResource("BoxShape3D_k261n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block_5"]
+mesh = SubResource("BoxMesh_8g6eo")
+skeleton = NodePath("../../Block_5")
+
+[node name="Block_6" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.51354, 0.526666, -1.37252)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block_6"]
+shape = SubResource("BoxShape3D_k261n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block_6"]
+mesh = SubResource("BoxMesh_8g6eo")
+skeleton = NodePath("../../Block_6")
