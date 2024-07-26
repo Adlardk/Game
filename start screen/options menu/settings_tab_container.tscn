@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cg8btn0omkow2"]
+[gd_scene load_steps=4 format=3 uid="uid://cg8btn0omkow2"]
+
+[ext_resource type="PackedScene" uid="uid://c6qrqdt1yut33" path="res://start screen/options menu/hotkey_rebind_button.tscn" id="1_xrmek"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dbtp3"]
 
@@ -128,15 +130,23 @@ layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/controlls/MarginContainer/ScrollContainer"]
 layout_mode = 2
+theme_override_constants/separation = 64
 
 [node name="HSeparator" type="HSeparator" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 25
+theme_override_constants/separation = 12
 theme_override_styles/separator = SubResource("StyleBoxEmpty_dbtp3")
+
+[node name="Hotkey_Rebind_Button" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_xrmek")]
+layout_mode = 2
+
+[node name="Hotkey_Rebind_Button2" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_xrmek")]
+layout_mode = 2
+action_name = "move_Right"
 
 [node name="HSeparator2" type="HSeparator" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 25
+theme_override_constants/separation = 12
 theme_override_styles/separator = SubResource("StyleBoxEmpty_t4phu")
 
 [node name="accceibility" type="TabBar" parent="TabContainer"]
