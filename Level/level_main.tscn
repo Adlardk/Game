@@ -4,7 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://dqxklwmnnd1yf" path="res://terrain_controller.tscn" id="2_ckdnq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dr8is"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sky_top_color = Color(0.443137, 0.721569, 0.94902, 1)
+sky_horizon_color = Color(0.443137, 0.721569, 0.94902, 1)
+sky_curve = 0.0494816
+ground_bottom_color = Color(0.23978, 0.38, 0.2242, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
 [sub_resource type="Sky" id="Sky_4qn0f"]

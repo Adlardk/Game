@@ -18,6 +18,7 @@ func _physics_process(_delta: float) -> void:
 
 	move_and_slide()
 
+	# Check for collisions
 	var collision = get_last_slide_collision()
 	if collision:
 		print("Collided with: ", collision.get_collider())
