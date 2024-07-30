@@ -3,8 +3,11 @@ extends CharacterBody3D
 ## Simple left/right character controller
 ##
 
+@onready var options_menu = preload("res://start screen/main_menu2.0/main_menu.tscn") as PackedScene
+
 ## Speed of character movement
 const SPEED = 5.0
+var score = 0
 
 func _physics_process(_delta: float) -> void:
 
@@ -15,10 +18,9 @@ func _physics_process(_delta: float) -> void:
 		velocity.x = direction.x * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	
 	move_and_slide()
 
-	# Check for collisions
 	var collision = get_last_slide_collision()
 	if collision:
 		print("Collided with: ", collision.get_collider())
