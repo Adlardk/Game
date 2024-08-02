@@ -15,7 +15,8 @@ func _process(delta):
 	if has_overlapping_bodies():
 		queue_free()
 		
-func _on_body_entered(body):
-	queue_free()
+func _on_item_collected():
+	Global.add_score(1)  # Add 10 points
+	queue_free()  # Remove the item from the scene
 	
 	

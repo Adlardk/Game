@@ -1,4 +1,4 @@
-extends RichTextLabel
+extends Label
 
 func _ready():
 	# Set the initial text

@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dfv27yv6w2k3h"]
+[gd_scene load_steps=8 format=3 uid="uid://dfv27yv6w2k3h"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_gctlk"]
 [ext_resource type="PackedScene" uid="uid://dqxklwmnnd1yf" path="res://terrain_controller.tscn" id="2_ckdnq"]
-[ext_resource type="PackedScene" uid="uid://dfsq7uotemiqh" path="res://score_ui.tscn" id="3_sgsjl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dr8is"]
 sky_top_color = Color(0.443137, 0.721569, 0.94902, 1)
@@ -47,5 +46,3 @@ mesh = SubResource("CapsuleMesh_4yoel")
 transform = Transform3D(1, 0, 0, 0, 0.859736, 0.510738, 0, -0.510738, 0.859736, 0, 1.72283, 1.06815)
 
 [node name="TerrainController" parent="." instance=ExtResource("2_ckdnq")]
-
-[node name="ScoreUI" parent="." instance=ExtResource("3_sgsjl")]
