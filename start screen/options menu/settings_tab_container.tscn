@@ -139,6 +139,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_dbtp3")
 
 [node name="Hotkey_Rebind_Button" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_xrmek")]
 layout_mode = 2
+action_name = "move_left"
 
 [node name="Hotkey_Rebind_Button2" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_xrmek")]
 layout_mode = 2
@@ -149,11 +150,11 @@ layout_mode = 2
 theme_override_constants/separation = 12
 theme_override_styles/separator = SubResource("StyleBoxEmpty_t4phu")
 
-[node name="accceibility" type="TabBar" parent="TabContainer"]
+[node name="accessibility" type="TabBar" parent="TabContainer"]
 visible = false
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="TabContainer/accceibility"]
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/accessibility"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -165,27 +166,27 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/accceibility/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/accessibility/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 64
 alignment = 1
 
-[node name="Label" type="Label" parent="TabContainer/accceibility/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "A1"
 
-[node name="Label2" type="Label" parent="TabContainer/accceibility/MarginContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "A2"
 
-[node name="Label3" type="Label" parent="TabContainer/accceibility/MarginContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "A3"
 
-[node name="Label4" type="Label" parent="TabContainer/accceibility/MarginContainer/VBoxContainer"]
+[node name="Label4" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "A4"
 
-[node name="Label5" type="Label" parent="TabContainer/accceibility/MarginContainer/VBoxContainer"]
+[node name="Label5" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "A5"
