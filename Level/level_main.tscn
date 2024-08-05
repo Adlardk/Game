@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://player.gd" id="1_gctlk"]
 [ext_resource type="PackedScene" uid="uid://dqxklwmnnd1yf" path="res://terrain_controller.tscn" id="2_ckdnq"]
-[ext_resource type="Script" path="res://RichTextLabel.gd" id="3_ibabd"]
+[ext_resource type="Script" path="res://Level/Label.gd" id="3_4moon"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dr8is"]
 sky_top_color = Color(0.443137, 0.721569, 0.94902, 1)
@@ -59,4 +59,4 @@ offset_right = 930.0
 offset_bottom = 302.0
 theme_override_fonts/font = SubResource("SystemFont_44twr")
 theme_override_font_sizes/font_size = 120
-script = ExtResource("3_ibabd")
+script = ExtResource("3_4moon")
