@@ -11,12 +11,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	rotate_y(deg_to_rad(ROT_SPEED))
-	
-	if has_overlapping_bodies():
-		queue_free()
+
 		
 func _on_item_collected():
-	Global.add_score(1)  # Add 10 points
+	Global.add_score(1)  
 	queue_free()  # Remove the item from the scene
 	
 	

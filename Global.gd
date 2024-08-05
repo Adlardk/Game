@@ -3,8 +3,8 @@ extends Node
 var score: int = 0
 
 # Function to increase the score
-func add_score(amount: int):
-	score += amount
+func add_score(amount:int):
+	score += 1
 	print("Score: ", score)
 
 # Function to reset the score
