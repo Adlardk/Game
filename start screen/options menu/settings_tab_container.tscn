@@ -139,7 +139,6 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_dbtp3")
 
 [node name="Hotkey_Rebind_Button" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_xrmek")]
 layout_mode = 2
-action_name = "move_left"
 
 [node name="Hotkey_Rebind_Button2" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_xrmek")]
 layout_mode = 2
