@@ -30,7 +30,7 @@ func set_text_for_key() -> void:
 		var action_keycode = OS.get_keycode_string(action_event.physical_keycode)
 		button.text = "%s" % action_keycode
 	else:  # Handle the case where no key is assigned
-		button.text = "No Key Assigned"
+		button.text = "No Key Assigned..."
 
 
 
@@ -42,15 +42,17 @@ func _on_button_toggled(button_pressed):
 		set_process_unhandled_key_input(button_pressed)
 		
 		for i in get_tree().get_nodes_in_group("hotkey_button"):
-			if i.action_name != self.action_name:
-				i.button.toggle_mode = false
-				i.set_process_unhandled_key_input(false)
+			if i is HotkeyRebindButton:  # Ensure correct type before accessing properties
+				if i.action_name != self.action_name:
+					i.button.toggle_mode = false
+					i.set_process_unhandled_key_input(false)
 	else:
 		
 		for i in get_tree().get_nodes_in_group("hotkey_button"):
-			if i.action_name != self.action_name:
-				i.button.toggle_mode = true
-				i.set_process_unhandled_key_input(false)
+			if i is HotkeyRebindButton:  # Ensure correct type before accessing properties
+				if i.action_name != self.action_name:
+					i.button.toggle_mode = false
+					i.set_process_unhandled_key_input(false)
 			
 		set_text_for_key()
 		
@@ -67,4 +69,4 @@ func rebind_action_key(event) -> void:
 	
 	set_process_unhandled_key_input(false)
 	set_text_for_key()
-	set_text_for_key()
+	set_action_name()
