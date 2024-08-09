@@ -9,18 +9,25 @@ extends CharacterBody3D
 const SPEED = 5.0
 var score = 0
 
-func _physics_process(_delta: float) -> void:
+@export var move_left_action : String = "move_Left"
+@export var move_right_action : String = "move_Right"
 
-	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	# We'll ignore up and down input, just using side to side
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+func _physics_process(_delta: float) -> void:
+	# Use custom input actions
+	var input_dir := Vector2(
+		Input.get_action_strength(move_right_action) - Input.get_action_strength(move_left_action),
+		0
+	)
+	
+	# Calculate direction based on input
+	var direction := (transform.basis * Vector3(input_dir.x, 0, 0)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
 	move_and_slide()
-
+	
 	var collision = get_last_slide_collision()
 	if collision:
 		print("Collided with: ", collision.get_collider())
