@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://3hmfu7lub277"]
+[gd_scene load_steps=7 format=3 uid="uid://3hmfu7lub277"]
 
 [ext_resource type="Script" path="res://start screen/main_menu/main_menu.gd" id="1_5mwxd"]
 [ext_resource type="Texture2D" uid="uid://bubp3mg8l0grs" path="res://start screen/assets/real backround.PNG" id="2_agibq"]
 [ext_resource type="PackedScene" uid="uid://hip0g63on748" path="res://start screen/main_menu/options menu/options_menu.tscn" id="3_roblr"]
+[ext_resource type="AudioStream" uid="uid://benslucfsdk53" path="res://start screen/main_menu/options menu/music/strange_factory_bpm100.ogg" id="4_rsrny"]
 
 [sub_resource type="SystemFont" id="SystemFont_e6072"]
 font_names = PackedStringArray("MV Boli")
@@ -96,3 +97,8 @@ text = "[EXIT] ➔
 [node name="Options_Menu" parent="." instance=ExtResource("3_roblr")]
 visible = false
 layout_mode = 1
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_rsrny")
+volume_db = -13.0
+autoplay = true
