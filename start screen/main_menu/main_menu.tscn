@@ -100,5 +100,6 @@ layout_mode = 1
 
 [node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_rsrny")
-volume_db = -13.0
+volume_db = -10.0
 autoplay = true
+bus = &"Music"
