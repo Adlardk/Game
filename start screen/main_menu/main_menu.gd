@@ -1,3 +1,4 @@
+
 class_name MainMenu
 extends Control
 
@@ -8,7 +9,7 @@ extends Control
 @onready var options_menu = $Options_Menu as OptionsMenu
 @onready var margin_container = $MarginContainer as MarginContainer
 
-@onready var start_level = load("res://start screen/main_menu/main_menu.tscn") as PackedScene
+@onready var start_level = load("res://Level/level_main.tscn") as PackedScene
 
 
 
