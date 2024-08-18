@@ -39,3 +39,4 @@ func handle_connecting_signals() -> void:
 	options_button.button_down.connect(on_options_pressed)
 	exit_button.button_down.connect(on_exit_pressed)
 	options_menu.exit_options_menu.connect(on_exit_options_menu)
+
