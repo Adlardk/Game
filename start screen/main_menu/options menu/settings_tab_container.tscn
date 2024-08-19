@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cg8btn0omkow2"]
+[gd_scene load_steps=7 format=3 uid="uid://cg8btn0omkow2"]
 
 [ext_resource type="PackedScene" uid="uid://b8e85k0sa3dp3" path="res://start screen/main_menu/options menu/window_mode_button.tscn" id="1_aargw"]
 [ext_resource type="PackedScene" uid="uid://c6qrqdt1yut33" path="res://start screen/main_menu/options menu/hotkey_rebind_button.tscn" id="1_xrmek"]
 [ext_resource type="PackedScene" uid="uid://f535vc6y4ek2" path="res://start screen/main_menu/options menu/resolution_mode_button.tscn" id="2_cawn1"]
+[ext_resource type="PackedScene" uid="uid://bnr1mgs54qwe0" path="res://start screen/main_menu/options menu/music/audio_slider_settings.tscn" id="4_gesjf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dbtp3"]
 
@@ -120,6 +121,9 @@ layout_mode = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/sound/MarginContainer/ScrollContainer"]
 layout_mode = 2
 theme_override_constants/separation = 64
+
+[node name="Audio_Slider_Settings" parent="TabContainer/sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("4_gesjf")]
+layout_mode = 2
 
 [node name="accessibility" type="TabBar" parent="TabContainer"]
 visible = false
