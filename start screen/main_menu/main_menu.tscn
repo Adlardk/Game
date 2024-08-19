@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=3 uid="uid://3hmfu7lub277"]
+
+[ext_resource type="Script" path="res://start screen/main_menu/main_menu.gd" id="1_5mwxd"]
+[ext_resource type="Texture2D" uid="uid://bubp3mg8l0grs" path="res://start screen/assets/real backround.PNG" id="2_agibq"]
+[ext_resource type="PackedScene" uid="uid://hip0g63on748" path="res://start screen/main_menu/options menu/options_menu.tscn" id="3_roblr"]
+[ext_resource type="AudioStream" uid="uid://benslucfsdk53" path="res://start screen/main_menu/options menu/music/strange_factory_bpm100.ogg" id="4_rsrny"]
+
+[sub_resource type="SystemFont" id="SystemFont_e6072"]
+font_names = PackedStringArray("MV Boli")
+
+[sub_resource type="SystemFont" id="SystemFont_7asbm"]
+font_names = PackedStringArray("MV Boli")
+
+[node name="Main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5mwxd")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_agibq")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 75
+
+[node name="separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = SubResource("SystemFont_e6072")
+theme_override_font_sizes/font_size = 100
+text = "Recovery Run 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="separator" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Start_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_7asbm")
+theme_override_font_sizes/font_size = 30
+text = "Start Game!!"
+
+[node name="Options_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_7asbm")
+theme_override_font_sizes/font_size = 30
+text = "OPTIONS ⚙️"
+
+[node name="Exit_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_7asbm")
+theme_override_font_sizes/font_size = 30
+text = "[EXIT] ➔
+"
+
+[node name="Options_Menu" parent="." instance=ExtResource("3_roblr")]
+visible = false
+layout_mode = 1
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_rsrny")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"
