@@ -5,7 +5,7 @@ extends CharacterBody3D
 
 
 @onready var options_menu = load("res://start screen/main_menu2.0/main_menu.tscn") as PackedScene
-
+@onready var start_level = load("res://start screen/main_menu/main_menu.tscn") as PackedScene
 
 
 ## Speed of character movement
@@ -34,4 +34,5 @@ func _physics_process(_delta: float) -> void:
 	var collision = get_last_slide_collision()
 	if collision:
 		print("Collided with: ", collision.get_collider())
-		get_tree().quit()
+		get_tree().change_scene_to_packed(start_level)
+		

@@ -17,6 +17,7 @@ func _ready():
 	handle_connecting_signals()
 	
 func on_start_pressed() -> void:
+	Global.score = 0
 	get_tree().change_scene_to_packed(start_level) 
 
 
