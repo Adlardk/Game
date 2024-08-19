@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dfv27yv6w2k3h"]
+[gd_scene load_steps=11 format=3 uid="uid://dfv27yv6w2k3h"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_gctlk"]
 [ext_resource type="PackedScene" uid="uid://dqxklwmnnd1yf" path="res://terrain_controller.tscn" id="2_ckdnq"]
 [ext_resource type="Script" path="res://Level/Label.gd" id="3_4moon"]
+[ext_resource type="AudioStream" uid="uid://benslucfsdk53" path="res://start screen/main_menu/options menu/music/strange_factory_bpm100.ogg" id="4_1ng7m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dr8is"]
 sky_top_color = Color(0.443137, 0.721569, 0.94902, 1)
@@ -60,3 +61,9 @@ offset_bottom = 302.0
 theme_override_fonts/font = SubResource("SystemFont_44twr")
 theme_override_font_sizes/font_size = 120
 script = ExtResource("3_4moon")
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_1ng7m")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"
