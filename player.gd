@@ -3,11 +3,10 @@ extends CharacterBody3D
 ## Simple left/right character controller
 ##
 
-<<<<<<< HEAD
+
 @onready var options_menu = load("res://start screen/main_menu2.0/main_menu.tscn") as PackedScene
-=======
-@onready var options_menu = preload("res://start screen/main_menu/main_menu.tscn") as PackedScene
->>>>>>> 29f0f71909cd499f8bffcbc7d3024fb96a930048
+
+
 
 ## Speed of character movement
 const SPEED = 5.0
