@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4cpt75tw5767"]
+[gd_scene load_steps=7 format=3 uid="uid://c4cpt75tw5767"]
+
+[ext_resource type="Script" path="res://death_screen.gd" id="1_kerif"]
+[ext_resource type="AudioStream" uid="uid://benslucfsdk53" path="res://start screen/main_menu/options menu/music/strange_factory_bpm100.ogg" id="2_eh5cq"]
+[ext_resource type="Script" path="res://Label.gd" id="2_gbrps"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kjxjj"]
 load_path = "res://.godot/imported/real backround.PNG-e5556c6261805ea1ed3dd26e6797c0b3.ctex"
+
+[sub_resource type="SystemFont" id="SystemFont_6cjw2"]
 
 [sub_resource type="SystemFont" id="SystemFont_5d1mx"]
 
@@ -12,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_kerif")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -37,24 +44,41 @@ theme_override_constants/margin_bottom = 12
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 75
+alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_6cjw2")
+theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("2_gbrps")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
+alignment = 2
 
 [node name="Control" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Exit_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Back_button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_fonts/font = SubResource("SystemFont_5d1mx")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 text = "Return to Menu"
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_eh5cq")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"
