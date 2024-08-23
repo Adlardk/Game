@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dfv27yv6w2k3h"]
+[gd_scene load_steps=13 format=3 uid="uid://dfv27yv6w2k3h"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_gctlk"]
 [ext_resource type="PackedScene" uid="uid://dqxklwmnnd1yf" path="res://terrain_controller.tscn" id="2_ckdnq"]
+[ext_resource type="Texture2D" uid="uid://lixdgt0pcwd3" path="res://Character 9.47.28 AM 9.48.24 AM/Print_2.png" id="2_g57wi"]
 [ext_resource type="Script" path="res://Level/Label.gd" id="3_4moon"]
 [ext_resource type="AudioStream" uid="uid://benslucfsdk53" path="res://start screen/main_menu/options menu/music/strange_factory_bpm100.ogg" id="4_1ng7m"]
 
@@ -23,7 +24,10 @@ glow_enabled = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d1mqv"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_4yoel"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n7hvu"]
+albedo_texture = ExtResource("2_g57wi")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_m4m1a"]
 
 [sub_resource type="SystemFont" id="SystemFont_44twr"]
 
@@ -44,7 +48,8 @@ script = ExtResource("1_gctlk")
 shape = SubResource("CapsuleShape3D_d1mqv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
-mesh = SubResource("CapsuleMesh_4yoel")
+material_override = SubResource("StandardMaterial3D_n7hvu")
+mesh = SubResource("CapsuleMesh_m4m1a")
 
 [node name="Camera3D" type="Camera3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 0.859736, 0.510738, 0, -0.510738, 0.859736, 0, 1.72283, 1.06815)
