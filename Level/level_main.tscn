@@ -1,8 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dfv27yv6w2k3h"]
+[gd_scene load_steps=14 format=3 uid="uid://dfv27yv6w2k3h"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_gctlk"]
 [ext_resource type="PackedScene" uid="uid://dqxklwmnnd1yf" path="res://terrain_controller.tscn" id="2_ckdnq"]
-[ext_resource type="Texture2D" uid="uid://lixdgt0pcwd3" path="res://Character 9.47.28 AM 9.48.24 AM/Print_2.png" id="2_g57wi"]
+[ext_resource type="Texture2D" uid="uid://cybl3minopqgy" path="res://new chracters/possible.webp" id="2_lh7hv"]
 [ext_resource type="Script" path="res://Level/Label.gd" id="3_4moon"]
 [ext_resource type="AudioStream" uid="uid://benslucfsdk53" path="res://start screen/main_menu/options menu/music/strange_factory_bpm100.ogg" id="4_1ng7m"]
 
@@ -24,10 +24,12 @@ glow_enabled = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d1mqv"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n7hvu"]
-albedo_texture = ExtResource("2_g57wi")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7asm6"]
+albedo_texture = ExtResource("2_lh7hv")
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_m4m1a"]
+[sub_resource type="QuadMesh" id="QuadMesh_vb40p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qd0x8"]
 
 [sub_resource type="SystemFont" id="SystemFont_44twr"]
 
@@ -45,11 +47,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.1, 2.08165e-12
 script = ExtResource("1_gctlk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0716279, 0.205512, -2.38419e-07)
 shape = SubResource("CapsuleShape3D_d1mqv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
-material_override = SubResource("StandardMaterial3D_n7hvu")
-mesh = SubResource("CapsuleMesh_m4m1a")
+transform = Transform3D(0.999976, -0.0069289, 0, 0.0069289, 0.999976, 0, 0, 0, 1, 0.0329326, -0.519315, 0.101573)
+material_override = SubResource("StandardMaterial3D_7asm6")
+mesh = SubResource("QuadMesh_vb40p")
+surface_material_override/0 = SubResource("StandardMaterial3D_qd0x8")
 
 [node name="Camera3D" type="Camera3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 0.859736, 0.510738, 0, -0.510738, 0.859736, 0, 1.72283, 1.06815)
