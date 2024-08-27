@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dbnhbn5xqh71j"
+path="res://.godot/imported/13225_square_alcohol_bottle_v2.obj-b72deff608ca18be931f858b8c9b016d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/13225_square_alcohol_bottle_v2.obj-b72deff608ca18be931f858b8c9b016d.mesh"]
+
+source_file="res://assets/13225_square_alcohol_bottle_v2.obj"
+dest_files=["res://.godot/imported/13225_square_alcohol_bottle_v2.obj-b72deff608ca18be931f858b8c9b016d.mesh", "res://.godot/imported/13225_square_alcohol_bottle_v2.obj-b72deff608ca18be931f858b8c9b016d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
