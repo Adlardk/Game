@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://c8qadu0nit78"]
+
+[ext_resource type="PackedScene" uid="uid://cjs2sncrd0fm0" path="res://Animated_Character/GTLF/StylizedCharacter.glb" id="1_2ja7p"]
+[ext_resource type="Script" path="res://player.gd" id="1_5q8x5"]
+[ext_resource type="PackedScene" uid="uid://dqxklwmnnd1yf" path="res://terrain_controller.tscn" id="3_r7qx3"]
+[ext_resource type="AudioStream" uid="uid://benslucfsdk53" path="res://start screen/main_menu/options menu/music/strange_factory_bpm100.ogg" id="4_ceoiy"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fvsl6"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_aa7a8"]
+sky_material = SubResource("ProceduralSkyMaterial_fvsl6")
+
+[sub_resource type="Environment" id="Environment_1ygon"]
+background_mode = 2
+sky = SubResource("Sky_aa7a8")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ieba5"]
+
+[node name="Level_main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1ygon")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.1, 2.08165e-12)
+script = ExtResource("1_5q8x5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_ieba5")
+
+[node name="StylizedCharacter" parent="Player" instance=ExtResource("1_2ja7p")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 0.89272, 0.450613, 0, -0.450613, 0.89272, -0.710902, 1.39874, 3.44863)
+
+[node name="TerrainController" parent="." instance=ExtResource("3_r7qx3")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ceoiy")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"
