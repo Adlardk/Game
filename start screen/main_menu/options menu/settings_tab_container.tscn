@@ -32,7 +32,7 @@ offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 1
+current_tab = 3
 
 [node name="graphics" type="TabBar" parent="TabContainer"]
 visible = false
@@ -64,6 +64,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="controls" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/controls"]
@@ -129,7 +130,6 @@ theme_override_constants/separation = 64
 layout_mode = 2
 
 [node name="accessibility" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/accessibility"]
@@ -188,7 +188,7 @@ text = "Display Settings: On some computers, the sizing and fonts may appear dif
  Also, when changing window options, be careful as the buttons may be slightly out of place when trying to click them—this can vary between devices."
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
+[node name="summary_label" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.752941, 0, 0.752941, 1)
