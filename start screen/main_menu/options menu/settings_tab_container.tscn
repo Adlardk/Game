@@ -149,7 +149,7 @@ layout_mode = 2
 theme_override_constants/separation = 64
 alignment = 1
 
-[node name="Label" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
+[node name="intro_label" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.752941, 0, 0.752941, 1)
@@ -159,14 +159,15 @@ theme_override_font_sizes/font_size = 20
 text = "In this game, you can customize your experience to better suit your needs:"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 60)
+[node name="Label4" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0.372549, 0.882353, 1)
-theme_override_colors/font_outline_color = Color(0, 0.372549, 0.882353, 1)
-text = "Keybinding: Change the controls to match your preferred setup. Whether you use arrow keys, WASD, 
-or any other configuration, you can easily adjust the keybindings to what feels most comfortable for you."
+theme_override_colors/font_shadow_color = Color(0.760784, 0.698039, 0.0705882, 1)
+theme_override_colors/font_outline_color = Color(0.760784, 0.698039, 0.0705882, 1)
+theme_override_font_sizes/font_size = 13
+text = "Display Settings: On some computers, the sizing and fonts may appear differently.
+ Feel free to adjust your window settings to match your personal preferences for the best visual experience.
+ Also, when changing window options, be careful as the buttons may be slightly out of place when trying to click them—this can vary between devices."
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
@@ -178,14 +179,14 @@ text = "Sound Adjustment: Control the volume of the game's music with our sound 
  allowing you to set the audio level that works best for your listening environment."
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
+[node name="keybind_label" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0.760784, 0.698039, 0.0705882, 1)
-theme_override_colors/font_outline_color = Color(0.760784, 0.698039, 0.0705882, 1)
-text = "Display Settings: On some computers, the sizing and fonts may appear differently.
- Feel free to adjust your window settings to match your personal preferences for the best visual experience.
- Also, when changing window options, be careful as the buttons may be slightly out of place when trying to click them—this can vary between devices."
+theme_override_colors/font_shadow_color = Color(0, 0.372549, 0.882353, 1)
+theme_override_colors/font_outline_color = Color(0, 0.372549, 0.882353, 1)
+text = "Keybinding: Change the controls to match your preferred setup. Whether you use arrow keys, WASD, 
+or any other configuration, you can easily adjust the keybindings to what feels most comfortable for you."
 horizontal_alignment = 1
 
 [node name="summary_label" type="Label" parent="TabContainer/accessibility/MarginContainer/VBoxContainer"]
