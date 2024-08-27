@@ -29,7 +29,7 @@ func on_options_pressed() -> void:
 func on_exit_pressed() -> void: 
 	get_tree().quit()
 
-.
+
 
 func on_exit_options_menu() -> void: 
 	margin_container.visible = true
