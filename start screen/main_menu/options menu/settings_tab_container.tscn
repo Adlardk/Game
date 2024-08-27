@@ -32,7 +32,7 @@ offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 3
+current_tab = 1
 
 [node name="graphics" type="TabBar" parent="TabContainer"]
 visible = false
@@ -63,11 +63,10 @@ layout_mode = 2
 [node name="Resolution_Mode_Button" parent="TabContainer/graphics/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_cawn1")]
 layout_mode = 2
 
-[node name="controlls" type="TabBar" parent="TabContainer"]
-visible = false
+[node name="controls" type="TabBar" parent="TabContainer"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="TabContainer/controlls"]
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/controls"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -79,26 +78,26 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/controlls/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/controls/MarginContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/controlls/MarginContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/controls/MarginContainer/ScrollContainer"]
 layout_mode = 2
 theme_override_constants/separation = 64
 
-[node name="HSeparator" type="HSeparator" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="TabContainer/controls/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 12
 theme_override_styles/separator = SubResource("StyleBoxEmpty_dbtp3")
 
-[node name="Hotkey_Rebind_Button" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_xrmek")]
+[node name="Hotkey_Rebind_Button" parent="TabContainer/controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_xrmek")]
 layout_mode = 2
 
-[node name="Hotkey_Rebind_Button2" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_xrmek")]
+[node name="Hotkey_Rebind_Button2" parent="TabContainer/controls/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_xrmek")]
 layout_mode = 2
 action_name = "move_Right"
 
-[node name="HSeparator2" type="HSeparator" parent="TabContainer/controlls/MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="TabContainer/controls/MarginContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 12
 theme_override_styles/separator = SubResource("StyleBoxEmpty_t4phu")
@@ -130,6 +129,7 @@ theme_override_constants/separation = 64
 layout_mode = 2
 
 [node name="accessibility" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/accessibility"]
