@@ -9,7 +9,7 @@ extends Control
 @onready var options_menu = $Options_Menu as OptionsMenu
 @onready var margin_container = $MarginContainer as MarginContainer
 
-@onready var start_level = load("res://Level/level_main.tscn") as PackedScene
+@onready var start_level = load("res://level_main.tscn") as PackedScene
 
 
 
