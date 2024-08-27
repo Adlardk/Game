@@ -32,7 +32,7 @@ offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 2
+current_tab = 3
 
 [node name="graphics" type="TabBar" parent="TabContainer"]
 visible = false
@@ -104,6 +104,7 @@ theme_override_constants/separation = 12
 theme_override_styles/separator = SubResource("StyleBoxEmpty_t4phu")
 
 [node name="sound" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/sound"]
@@ -129,7 +130,6 @@ theme_override_constants/separation = 64
 layout_mode = 2
 
 [node name="accessibility" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/accessibility"]

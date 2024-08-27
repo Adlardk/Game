@@ -7,6 +7,7 @@ func add_score(amount:int):
 	score += 1
 	print("Score: ", score)
 
+
 # Function to reset the score
 func reset_score():
 	score = 0
