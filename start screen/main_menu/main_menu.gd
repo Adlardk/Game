@@ -29,8 +29,6 @@ func on_options_pressed() -> void:
 func on_exit_pressed() -> void: 
 	get_tree().quit()
 
-HEAD
-
 
 
 

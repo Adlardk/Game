@@ -1,4 +1,4 @@
-HEAD
+
 [gd_scene load_steps=14 format=3 uid="uid://dfv27yv6w2k3h"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_gctlk"]
@@ -503,7 +503,7 @@ tracks/66/interp = 1
 tracks/66/loop_wrap = true
 tracks/66/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
-HEAD
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7asm6"]
 albedo_texture = ExtResource("2_lh7hv")
 
@@ -4815,7 +4815,7 @@ speed_scale = 0.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0716279, 0.205512, -2.38419e-07)
 shape = SubResource("CapsuleShape3D_d1mqv")
 
-HEAD
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(0.999976, -0.0069289, 0, 0.0069289, 0.999976, 0, 0, 0, 1, 0.0329326, -0.519315, 0.101573)
 material_override = SubResource("StandardMaterial3D_7asm6")
