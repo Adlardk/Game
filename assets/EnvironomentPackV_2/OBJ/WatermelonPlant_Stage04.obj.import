@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dj6tyrulby3tn"
+path="res://.godot/imported/WatermelonPlant_Stage04.obj-bcdac00a394be4dc9a33669424d8d5d4.mesh"
+
+[deps]
+
+files=["res://.godot/imported/WatermelonPlant_Stage04.obj-bcdac00a394be4dc9a33669424d8d5d4.mesh"]
+
+source_file="res://assets/EnvironomentPackV_2/OBJ/WatermelonPlant_Stage04.obj"
+dest_files=["res://.godot/imported/WatermelonPlant_Stage04.obj-bcdac00a394be4dc9a33669424d8d5d4.mesh", "res://.godot/imported/WatermelonPlant_Stage04.obj-bcdac00a394be4dc9a33669424d8d5d4.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://crm4q2dnpbrc3"
+path="res://.godot/imported/TomatoPlant_Stage_04.obj-606d167d03f58650a1206d8ad12532ec.mesh"
+
+[deps]
+
+files=["res://.godot/imported/TomatoPlant_Stage_04.obj-606d167d03f58650a1206d8ad12532ec.mesh"]
+
+source_file="res://assets/EnvironomentPackV_2/OBJ/TomatoPlant_Stage_04.obj"
+dest_files=["res://.godot/imported/TomatoPlant_Stage_04.obj-606d167d03f58650a1206d8ad12532ec.mesh", "res://.godot/imported/TomatoPlant_Stage_04.obj-606d167d03f58650a1206d8ad12532ec.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
