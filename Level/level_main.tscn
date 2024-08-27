@@ -1,4 +1,4 @@
-HEAD
+
 [gd_scene load_steps=14 format=3 uid="uid://dfv27yv6w2k3h"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_gctlk"]
@@ -10,7 +10,7 @@ HEAD
 [ext_resource type="Script" path="res://player.gd" id="1_gctlk"]
 [ext_resource type="PackedScene" uid="uid://dqxklwmnnd1yf" path="res://terrain_controller.tscn" id="2_ckdnq"]
 [ext_resource type="PackedScene" uid="uid://cjs2sncrd0fm0" path="res://Animated_Character/GTLF/StylizedCharacter.glb" id="2_uefc3"]
-a48ea5300661d436bd3317c4ab45ed1d29756d80
+
 [ext_resource type="Script" path="res://Level/Label.gd" id="3_4moon"]
 [ext_resource type="AudioStream" uid="uid://benslucfsdk53" path="res://start screen/main_menu/options menu/music/strange_factory_bpm100.ogg" id="4_1ng7m"]
 
@@ -503,7 +503,7 @@ tracks/66/interp = 1
 tracks/66/loop_wrap = true
 tracks/66/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
-HEAD
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7asm6"]
 albedo_texture = ExtResource("2_lh7hv")
 
@@ -4785,7 +4785,6 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d1mqv"]
->>>>>>> a48ea5300661d436bd3317c4ab45ed1d29756d80
 
 [sub_resource type="SystemFont" id="SystemFont_44twr"]
 
@@ -4816,14 +4815,14 @@ speed_scale = 0.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0716279, 0.205512, -2.38419e-07)
 shape = SubResource("CapsuleShape3D_d1mqv")
 
-HEAD
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(0.999976, -0.0069289, 0, 0.0069289, 0.999976, 0, 0, 0, 1, 0.0329326, -0.519315, 0.101573)
 material_override = SubResource("StandardMaterial3D_7asm6")
 mesh = SubResource("QuadMesh_vb40p")
 surface_material_override/0 = SubResource("StandardMaterial3D_qd0x8")
 
-a48ea5300661d436bd3317c4ab45ed1d29756d80
+
 [node name="Camera3D" type="Camera3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 0.859736, 0.510738, 0, -0.510738, 0.859736, 0, 1.95136, 0.892719)
 
