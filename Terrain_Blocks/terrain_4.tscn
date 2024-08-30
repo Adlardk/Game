@@ -1,6 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://g5t44e8gcyp6"]
+[gd_scene load_steps=13 format=3 uid="uid://g5t44e8gcyp6"]
 
 [ext_resource type="PackedScene" uid="uid://no27b3arurrv" path="res://coin.tscn" id="1_5wd26"]
+[ext_resource type="ArrayMesh" uid="uid://dxd2gg6054030" path="res://assets/Nature Kit/models/Tree_Pine_6.obj" id="2_57jjo"]
+[ext_resource type="ArrayMesh" uid="uid://mc3qjv2o2bkf" path="res://assets/Nature Kit/models/Tree_Pine_4.obj" id="3_5ao0l"]
+[ext_resource type="ArrayMesh" uid="uid://bm6ugsbt33l2x" path="res://assets/Nature Kit/models/Tent_Leanto_2.obj" id="4_24whb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i1a3e"]
 albedo_color = Color(0.160784, 0.380392, 0.121569, 1)
@@ -164,3 +167,51 @@ shape = SubResource("BoxShape3D_k261n")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20274, 0, -0.938392)
 mesh = SubResource("BoxMesh_8g6eo")
 skeleton = NodePath("../../Block_6")
+
+[node name="TreePine6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.796, -9.53674e-07, 7.54451)
+mesh = ExtResource("2_57jjo")
+
+[node name="TreePine7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7799, -9.53674e-07, 2.74871)
+mesh = ExtResource("2_57jjo")
+
+[node name="TreePine8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9024, 0, -4.03328)
+mesh = ExtResource("2_57jjo")
+
+[node name="TreePine4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5557, 0, -7.27693)
+mesh = ExtResource("3_5ao0l")
+
+[node name="TreePine5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8639, 0, -6.312)
+mesh = ExtResource("3_5ao0l")
+
+[node name="TreePine9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5589, 9.53674e-07, -3.62373)
+mesh = ExtResource("3_5ao0l")
+
+[node name="TreePine10" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4124, -9.53674e-07, -1.62032)
+mesh = ExtResource("3_5ao0l")
+
+[node name="TreePine11" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4998, 0, 0.137051)
+mesh = ExtResource("3_5ao0l")
+
+[node name="TreePine12" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1589, 0, 1.27324)
+mesh = ExtResource("3_5ao0l")
+
+[node name="TreePine13" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5583, 0, 6.30599)
+mesh = ExtResource("3_5ao0l")
+
+[node name="TreePine14" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5141, 0, 7.81886)
+mesh = ExtResource("3_5ao0l")
+
+[node name="TentLeanto2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 11.5106, 0, 3.71969)
+mesh = ExtResource("4_24whb")

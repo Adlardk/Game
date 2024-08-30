@@ -1,7 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://s5p4pcy6onjw"]
+[gd_scene load_steps=22 format=3 uid="uid://s5p4pcy6onjw"]
 
 [ext_resource type="PackedScene" uid="uid://no27b3arurrv" path="res://coin.tscn" id="1_dntjr"]
 [ext_resource type="ArrayMesh" uid="uid://dbnhbn5xqh71j" path="res://assets/13225_square_alcohol_bottle_v2.obj" id="2_25l8r"]
+[ext_resource type="ArrayMesh" uid="uid://mc3qjv2o2bkf" path="res://assets/Nature Kit/models/Tree_Pine_4.obj" id="3_mrh4w"]
+[ext_resource type="ArrayMesh" uid="uid://2xssokhc7scx" path="res://assets/Nature Kit/models/Tree_Pine_3.obj" id="4_emtxp"]
+[ext_resource type="ArrayMesh" uid="uid://dpj14xrpuk52w" path="res://assets/Nature Kit/models/Tree_Pine_5.obj" id="5_7k15p"]
+[ext_resource type="ArrayMesh" uid="uid://dxd2gg6054030" path="res://assets/Nature Kit/models/Tree_Pine_6.obj" id="6_00pnn"]
+[ext_resource type="ArrayMesh" uid="uid://bffr5us6saqm0" path="res://assets/Nature Kit/models/Tree_Pine_2.obj" id="7_euttt"]
+[ext_resource type="ArrayMesh" uid="uid://cftvmmtnufyp8" path="res://assets/Nature Kit/models/Tree_Oak_8.obj" id="8_etfs4"]
+[ext_resource type="ArrayMesh" uid="uid://c2ynb7febix7l" path="res://assets/Nature Kit/models/Tree_Oak_7.obj" id="9_pggda"]
+[ext_resource type="ArrayMesh" uid="uid://rjkupasf1aag" path="res://assets/Nature Kit/models/Tree_Oak_6.obj" id="10_i7hy0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3tf0"]
 albedo_color = Color(0.160784, 0.380392, 0.121569, 1)
@@ -180,3 +188,87 @@ shape = SubResource("BoxShape3D_k261n")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.169202, -2.38419e-07, -2.79656)
 mesh = SubResource("BoxMesh_8g6eo")
 skeleton = NodePath("../../Block_6")
+
+[node name="TreePine4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0481, 0, 8.7595)
+mesh = ExtResource("3_mrh4w")
+
+[node name="TreePine5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3146, 9.53674e-07, 8.87908)
+mesh = ExtResource("3_mrh4w")
+
+[node name="TreePine6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3916, 0, 5.84615)
+mesh = ExtResource("3_mrh4w")
+
+[node name="TreePine3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2782, -1.90735e-06, 4.13477)
+mesh = ExtResource("4_emtxp")
+
+[node name="TreePine7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0389, 0, 2.34829)
+mesh = ExtResource("4_emtxp")
+
+[node name="TreePine8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1772, -1.90735e-06, 0.637588)
+mesh = ExtResource("5_7k15p")
+
+[node name="TreePine9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5361, -1.90735e-06, -1.31727)
+mesh = ExtResource("6_00pnn")
+
+[node name="TreePine10" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0676, 1.90735e-06, -3.15841)
+mesh = ExtResource("4_emtxp")
+
+[node name="TreePine11" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6771, -3.8147e-06, -4.95653)
+mesh = ExtResource("3_mrh4w")
+
+[node name="TreePine12" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3086, 0, -6.31536)
+mesh = ExtResource("4_emtxp")
+
+[node name="TreePine2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.93806, -1.90735e-06, -8.84454)
+mesh = ExtResource("7_euttt")
+
+[node name="TreePine13" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.567, -3.8147e-06, -8.28733)
+mesh = ExtResource("5_7k15p")
+
+[node name="TreePine14" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3743, 0, 7.62266)
+mesh = ExtResource("6_00pnn")
+
+[node name="TreePine15" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0959, -1.90735e-06, 6.13226)
+mesh = ExtResource("7_euttt")
+
+[node name="TreeOak8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.83882, 0, 2.31836)
+mesh = ExtResource("8_etfs4")
+
+[node name="TreeOak7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1905, 1.90735e-06, 1.4544)
+mesh = ExtResource("9_pggda")
+
+[node name="TreeOak6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.64273, -1.90735e-06, -1.44581)
+mesh = ExtResource("10_i7hy0")
+
+[node name="TreePine16" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4539, 1.90735e-06, -2.41136)
+mesh = ExtResource("6_00pnn")
+
+[node name="TreePine17" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3759, 0, -5.40497)
+mesh = ExtResource("5_7k15p")
+
+[node name="TreePine18" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.612, 0, -7.08571)
+mesh = ExtResource("3_mrh4w")
+
+[node name="TreePine19" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8078, 0, -8.50236)
+mesh = ExtResource("4_emtxp")

@@ -1,6 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://1ynd4rn1pap0"]
+[gd_scene load_steps=19 format=3 uid="uid://1ynd4rn1pap0"]
 
 [ext_resource type="PackedScene" uid="uid://no27b3arurrv" path="res://coin.tscn" id="1_qjfd5"]
+[ext_resource type="ArrayMesh" uid="uid://bynhnd6bf86is" path="res://assets/Nature Kit/models/Mountain_1.obj" id="2_ycl0q"]
+[ext_resource type="ArrayMesh" uid="uid://cencj48g8mnw5" path="res://assets/Nature Kit/models/Tree_Cedar_2.obj" id="3_2lh6o"]
+[ext_resource type="ArrayMesh" uid="uid://bj60xnf6soi53" path="res://assets/Nature Kit/models/Tree_Cedar_1.obj" id="4_eeicc"]
+[ext_resource type="ArrayMesh" uid="uid://bs0g5x7lomkph" path="res://assets/Nature Kit/models/Tree_Oak_1.obj" id="5_2ts4r"]
+[ext_resource type="ArrayMesh" uid="uid://bnev2ncx2fdv6" path="res://assets/Nature Kit/models/Tree_Pine_1.obj" id="6_d3pfd"]
+[ext_resource type="ArrayMesh" uid="uid://cjcygags7myro" path="res://assets/Nature Kit/models/Tree_Cedar_3.obj" id="7_g5ced"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dufat"]
 albedo_color = Color(0.160784, 0.380392, 0.121569, 1)
@@ -161,3 +167,69 @@ shape = SubResource("BoxShape3D_k261n")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Block_6"]
 mesh = SubResource("BoxMesh_8g6eo")
 skeleton = NodePath("../../Block_6")
+
+[node name="Mountain1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.64905, 0, -0.760746, 0, 1, 0, 0.760746, 0, 0.64905, -54.1974, 0, -6.58082)
+mesh = ExtResource("2_ycl0q")
+
+[node name="TreeCedar2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -11.2138, 3.8147e-06, 8.74917)
+mesh = ExtResource("3_2lh6o")
+
+[node name="TreeCedar1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -10.9662, 0, 6.14216)
+mesh = ExtResource("4_eeicc")
+
+[node name="TreeOak1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 11.3822, -1.90735e-06, 7.32353)
+mesh = ExtResource("5_2ts4r")
+
+[node name="TreeOak1" type="MeshInstance3D" parent="TreeOak1"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -15.369, -1.90735e-06, -5.37205)
+mesh = ExtResource("5_2ts4r")
+
+[node name="TreePine1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9375, 0, 1.01467)
+mesh = ExtResource("6_d3pfd")
+
+[node name="TreePine2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3918, -9.53674e-07, 0.52316)
+mesh = ExtResource("6_d3pfd")
+
+[node name="TreePine3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4061, 0, -1.70071)
+mesh = ExtResource("6_d3pfd")
+
+[node name="TreePine4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1574, 0, -1.74764)
+mesh = ExtResource("6_d3pfd")
+
+[node name="TreePine5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0775, 0, -5.30779)
+mesh = ExtResource("6_d3pfd")
+
+[node name="TreePine6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2296, 1.90735e-06, -4.39444)
+mesh = ExtResource("6_d3pfd")
+
+[node name="TreePine7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4616, 1.90735e-06, -7.45124)
+mesh = ExtResource("6_d3pfd")
+
+[node name="TreePine8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8253, 1.90735e-06, -5.65448)
+mesh = ExtResource("6_d3pfd")
+
+[node name="TreeCedar3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3991, -0.0244889, -5.13163)
+mesh = ExtResource("7_g5ced")
+
+[node name="TreeCedar4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9574, -0.318522, -8.16573)
+mesh = ExtResource("7_g5ced")
+skeleton = NodePath("../TreeCedar5")
+
+[node name="TreeCedar5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3096, 0.0607071, -6.49646)
+mesh = ExtResource("7_g5ced")
+skeleton = NodePath("../TreeCedar3")
