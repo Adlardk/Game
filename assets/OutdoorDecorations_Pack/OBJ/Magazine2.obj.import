@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c58l3wo4s0rj"
+path="res://.godot/imported/Magazine2.obj-0ef4820448e89cfa41211b0f4395252e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Magazine2.obj-0ef4820448e89cfa41211b0f4395252e.mesh"]
+
+source_file="res://assets/OutdoorDecorations_Pack/OBJ/Magazine2.obj"
+dest_files=["res://.godot/imported/Magazine2.obj-0ef4820448e89cfa41211b0f4395252e.mesh", "res://.godot/imported/Magazine2.obj-0ef4820448e89cfa41211b0f4395252e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

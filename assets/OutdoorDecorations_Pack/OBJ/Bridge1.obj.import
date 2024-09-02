@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dvyilbxc6683p"
+path="res://.godot/imported/Bridge1.obj-3eb5c2ddeb6485abf32e83b14371939c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bridge1.obj-3eb5c2ddeb6485abf32e83b14371939c.mesh"]
+
+source_file="res://assets/OutdoorDecorations_Pack/OBJ/Bridge1.obj"
+dest_files=["res://.godot/imported/Bridge1.obj-3eb5c2ddeb6485abf32e83b14371939c.mesh", "res://.godot/imported/Bridge1.obj-3eb5c2ddeb6485abf32e83b14371939c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

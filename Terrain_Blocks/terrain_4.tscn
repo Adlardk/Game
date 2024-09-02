@@ -1,9 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://g5t44e8gcyp6"]
+[gd_scene load_steps=16 format=3 uid="uid://g5t44e8gcyp6"]
 
 [ext_resource type="PackedScene" uid="uid://no27b3arurrv" path="res://coin.tscn" id="1_5wd26"]
 [ext_resource type="ArrayMesh" uid="uid://dxd2gg6054030" path="res://assets/Nature Kit/models/Tree_Pine_6.obj" id="2_57jjo"]
 [ext_resource type="ArrayMesh" uid="uid://mc3qjv2o2bkf" path="res://assets/Nature Kit/models/Tree_Pine_4.obj" id="3_5ao0l"]
 [ext_resource type="ArrayMesh" uid="uid://bm6ugsbt33l2x" path="res://assets/Nature Kit/models/Tent_Leanto_2.obj" id="4_24whb"]
+[ext_resource type="ArrayMesh" uid="uid://730eqan8mk3w" path="res://assets/Nature Kit/models/Grass_Clump_5.obj" id="5_ub5g7"]
+[ext_resource type="ArrayMesh" uid="uid://bki01nxmbr3ug" path="res://assets/Nature Kit/models/Grass_Clump_4.obj" id="6_6271n"]
+[ext_resource type="ArrayMesh" uid="uid://dy7jeupwpi1j5" path="res://assets/Nature Kit/models/Grass_Clump_3.obj" id="7_gqak3"]
+[ext_resource type="ArrayMesh" uid="uid://d3tog8ux2pwqd" path="res://assets/Nature Kit/models/Grass_Clump_2.obj" id="8_oy1k3"]
+[ext_resource type="ArrayMesh" uid="uid://bqndpmufkikub" path="res://assets/OutdoorDecorations_Pack/OBJ/WallHedge1.obj" id="10_t783q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i1a3e"]
 albedo_color = Color(0.160784, 0.380392, 0.121569, 1)
@@ -19,14 +24,7 @@ size = Vector2(30, 20)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lb6e8"]
 data = PackedVector3Array(15, 0, 10, -15, 0, 10, 15, 0, -10, -15, 0, 10, -15, 0, -10, 15, 0, -10)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_dec1p"]
-size = Vector3(1, 1.5, 20)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_etnau"]
-albedo_color = Color(0.188235, 0.290196, 0.156863, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_bracv"]
-material = SubResource("StandardMaterial3D_etnau")
+[sub_resource type="BoxShape3D" id="BoxShape3D_wklms"]
 size = Vector3(1, 1.5, 20)
 
 [node name="Terrain_0" type="MeshInstance3D"]
@@ -116,33 +114,11 @@ shape = SubResource("BoxShape3D_k261n")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Block_2"]
 mesh = SubResource("BoxMesh_8g6eo")
 
-[node name="Wall" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9866, -0.180901, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52, 1, 2.08165e-12)
-shape = SubResource("BoxShape3D_dec1p")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.512, 1, 2.08165e-12)
-mesh = SubResource("BoxMesh_bracv")
-
 [node name="Coin" parent="." instance=ExtResource("1_5wd26")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.730378, -5.25898)
 
 [node name="Coin2" parent="." instance=ExtResource("1_5wd26")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.79908, 1.46076, -1.86498)
-
-[node name="Wall2" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6198, -0.180901, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52, 1, 0)
-shape = SubResource("BoxShape3D_dec1p")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.512, 1, 2.08165e-12)
-mesh = SubResource("BoxMesh_bracv")
 
 [node name="Block_3" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.37635, 0.703053, -3.8328)
@@ -215,3 +191,123 @@ mesh = ExtResource("3_5ao0l")
 [node name="TentLeanto2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 11.5106, 0, 3.71969)
 mesh = ExtResource("4_24whb")
+
+[node name="GrassClump5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.24387, -1.90735e-06, 8.21114)
+mesh = ExtResource("5_ub5g7")
+
+[node name="GrassClump4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.766006, -9.53674e-07, 7.98966)
+mesh = ExtResource("6_6271n")
+
+[node name="GrassClump6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.60569, 0, 8.9884)
+mesh = ExtResource("6_6271n")
+
+[node name="GrassClump3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.83706, -9.53674e-07, 7.6061)
+mesh = ExtResource("7_gqak3")
+
+[node name="GrassClump7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.19518, -9.53674e-07, 6.07707)
+mesh = ExtResource("7_gqak3")
+
+[node name="GrassClump8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.258548, -9.53674e-07, 3.53643)
+mesh = ExtResource("5_ub5g7")
+
+[node name="GrassClump2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68928, -9.53674e-07, 5.12791)
+mesh = ExtResource("8_oy1k3")
+
+[node name="GrassClump9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.16839, -9.53674e-07, 4.72951)
+mesh = ExtResource("7_gqak3")
+
+[node name="GrassClump10" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.16789, -9.53674e-07, -1.79503)
+mesh = ExtResource("5_ub5g7")
+
+[node name="GrassClump11" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22501, 0, -2.9063)
+mesh = ExtResource("6_6271n")
+
+[node name="GrassClump12" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65902, -9.53674e-07, -6.76965)
+mesh = ExtResource("7_gqak3")
+
+[node name="GrassClump13" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08572, 0, -8.34893)
+mesh = ExtResource("6_6271n")
+
+[node name="GrassClump14" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.56775, -1.90735e-06, -2.19333)
+mesh = ExtResource("5_ub5g7")
+
+[node name="GrassClump15" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.660033, 0, -8.8314)
+mesh = ExtResource("6_6271n")
+
+[node name="Wall4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9866, -0.180901, 0)
+
+[node name="WallHedge4" type="MeshInstance3D" parent="Wall4"]
+transform = Transform3D(-4.37114e-08, 2.09272e-16, 1, 3.48787e-16, 0.6, -3.48787e-16, -1, 2.09272e-16, -4.37114e-08, -6.27662, 1.2809, -7.89927)
+mesh = ExtResource("10_t783q")
+skeleton = NodePath("../..")
+
+[node name="WallHedge1" type="MeshInstance3D" parent="Wall4"]
+transform = Transform3D(-4.37114e-08, 2.09272e-16, 1, 3.48787e-16, 0.6, -3.48787e-16, -1, 2.09272e-16, -4.37114e-08, -6.39791, 1.19939, 7.49768)
+mesh = ExtResource("10_t783q")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52, 1, 2.08165e-12)
+shape = SubResource("BoxShape3D_wklms")
+
+[node name="WallHedge2" type="MeshInstance3D" parent="Wall4"]
+transform = Transform3D(-4.37114e-08, 2.09272e-16, 1, 3.48787e-16, 0.6, -3.48787e-16, -1, 2.09272e-16, -4.37114e-08, -6.326, 1.1, 3.611)
+mesh = ExtResource("10_t783q")
+skeleton = NodePath("../..")
+
+[node name="WallHedge3" type="MeshInstance3D" parent="Wall4"]
+transform = Transform3D(-4.37114e-08, 2.09272e-16, 1, 3.48787e-16, 0.6, -3.48787e-16, -1, 2.09272e-16, -4.37114e-08, -6.3134, 1.14208, -0.648)
+mesh = ExtResource("10_t783q")
+skeleton = NodePath("../..")
+
+[node name="WallHedge5" type="MeshInstance3D" parent="Wall4"]
+transform = Transform3D(-4.37114e-08, 2.09272e-16, 1, 3.48787e-16, 0.6, -3.48787e-16, -1, 2.09272e-16, -4.37114e-08, -6.28068, 1.16569, -5.07801)
+mesh = ExtResource("10_t783q")
+skeleton = NodePath("../..")
+
+[node name="Wall5" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 3.48787e-16, -8.74228e-08, 3.48787e-16, 1, -3.48787e-16, 8.74228e-08, -3.48787e-16, -1, 1.91802, -0.180901, 0)
+
+[node name="WallHedge4" type="MeshInstance3D" parent="Wall5"]
+transform = Transform3D(-4.37114e-08, 2.09272e-16, 1, 3.48787e-16, 0.6, -3.48787e-16, -1, 2.09272e-16, -4.37114e-08, -6.27662, 1.2809, -7.89927)
+mesh = ExtResource("10_t783q")
+skeleton = NodePath("../..")
+
+[node name="WallHedge1" type="MeshInstance3D" parent="Wall5"]
+transform = Transform3D(-4.37114e-08, 2.09272e-16, 1, 3.48787e-16, 0.6, -3.48787e-16, -1, 2.09272e-16, -4.37114e-08, -6.39791, 1.19939, 7.49768)
+mesh = ExtResource("10_t783q")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52, 1, 2.08165e-12)
+shape = SubResource("BoxShape3D_wklms")
+
+[node name="WallHedge2" type="MeshInstance3D" parent="Wall5"]
+transform = Transform3D(-4.37114e-08, 2.09272e-16, 1, 3.48787e-16, 0.6, -3.48787e-16, -1, 2.09272e-16, -4.37114e-08, -6.326, 1.1, 3.611)
+mesh = ExtResource("10_t783q")
+skeleton = NodePath("../..")
+
+[node name="WallHedge3" type="MeshInstance3D" parent="Wall5"]
+transform = Transform3D(-4.37114e-08, 2.09272e-16, 1, 3.48787e-16, 0.6, -3.48787e-16, -1, 2.09272e-16, -4.37114e-08, -6.3134, 1.14208, -0.648)
+mesh = ExtResource("10_t783q")
+skeleton = NodePath("../..")
+
+[node name="WallHedge5" type="MeshInstance3D" parent="Wall5"]
+transform = Transform3D(-4.37114e-08, 2.09272e-16, 1, 3.48787e-16, 0.6, -3.48787e-16, -1, 2.09272e-16, -4.37114e-08, -6.28068, 1.16569, -5.07801)
+mesh = ExtResource("10_t783q")
+skeleton = NodePath("../..")

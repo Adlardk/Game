@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bkibhehq67q8g"
+path="res://.godot/imported/WallHedge2.obj-1348ddc7b70d2e6b8bfb2e14894f1a8d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/WallHedge2.obj-1348ddc7b70d2e6b8bfb2e14894f1a8d.mesh"]
+
+source_file="res://assets/OutdoorDecorations_Pack/OBJ/WallHedge2.obj"
+dest_files=["res://.godot/imported/WallHedge2.obj-1348ddc7b70d2e6b8bfb2e14894f1a8d.mesh", "res://.godot/imported/WallHedge2.obj-1348ddc7b70d2e6b8bfb2e14894f1a8d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

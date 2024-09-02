@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://du8h8wq7vq8i7"
+path="res://.godot/imported/FlowerPot7.obj-01294a1d93f11220624a868a6f61f358.mesh"
+
+[deps]
+
+files=["res://.godot/imported/FlowerPot7.obj-01294a1d93f11220624a868a6f61f358.mesh"]
+
+source_file="res://assets/OutdoorDecorations_Pack/OBJ/FlowerPot7.obj"
+dest_files=["res://.godot/imported/FlowerPot7.obj-01294a1d93f11220624a868a6f61f358.mesh", "res://.godot/imported/FlowerPot7.obj-01294a1d93f11220624a868a6f61f358.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

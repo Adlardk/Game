@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bu3e45fchde80"
+path="res://.godot/imported/Gazebo1.obj-e60297df574b6eda03d2bfc7536a09cf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Gazebo1.obj-e60297df574b6eda03d2bfc7536a09cf.mesh"]
+
+source_file="res://assets/OutdoorDecorations_Pack/OBJ/Gazebo1.obj"
+dest_files=["res://.godot/imported/Gazebo1.obj-e60297df574b6eda03d2bfc7536a09cf.mesh", "res://.godot/imported/Gazebo1.obj-e60297df574b6eda03d2bfc7536a09cf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
