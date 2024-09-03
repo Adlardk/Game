@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cs5ykwk4r84rn"
+path="res://.godot/imported/Chiminea1.obj-0f25cea91adc519c33fa20cc5feab001.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Chiminea1.obj-0f25cea91adc519c33fa20cc5feab001.mesh"]
+
+source_file="res://assets/OutdoorDecorations_Pack 3/OBJ/Chiminea1.obj"
+dest_files=["res://.godot/imported/Chiminea1.obj-0f25cea91adc519c33fa20cc5feab001.mesh", "res://.godot/imported/Chiminea1.obj-0f25cea91adc519c33fa20cc5feab001.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

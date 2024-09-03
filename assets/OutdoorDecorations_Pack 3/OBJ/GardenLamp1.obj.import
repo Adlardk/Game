@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://8r8j35i1mhvl"
+path="res://.godot/imported/GardenLamp1.obj-7cd3a75bc63c4048c764035a5c25d4eb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/GardenLamp1.obj-7cd3a75bc63c4048c764035a5c25d4eb.mesh"]
+
+source_file="res://assets/OutdoorDecorations_Pack 3/OBJ/GardenLamp1.obj"
+dest_files=["res://.godot/imported/GardenLamp1.obj-7cd3a75bc63c4048c764035a5c25d4eb.mesh", "res://.godot/imported/GardenLamp1.obj-7cd3a75bc63c4048c764035a5c25d4eb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

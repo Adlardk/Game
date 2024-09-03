@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c57k7lmdc76r0"
+path="res://.godot/imported/Candle1.obj-cfc6ccd799f05c9af1807c606b07c047.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Candle1.obj-cfc6ccd799f05c9af1807c606b07c047.mesh"]
+
+source_file="res://assets/OutdoorDecorations_Pack 3/OBJ/Candle1.obj"
+dest_files=["res://.godot/imported/Candle1.obj-cfc6ccd799f05c9af1807c606b07c047.mesh", "res://.godot/imported/Candle1.obj-cfc6ccd799f05c9af1807c606b07c047.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
