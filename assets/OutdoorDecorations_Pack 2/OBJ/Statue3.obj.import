@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://sto0a4wttrcf"
+path="res://.godot/imported/Statue3.obj-4fff7ccf02239928d0e31b288e7589e1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Statue3.obj-4fff7ccf02239928d0e31b288e7589e1.mesh"]
+
+source_file="res://assets/OutdoorDecorations_Pack 2/OBJ/Statue3.obj"
+dest_files=["res://.godot/imported/Statue3.obj-4fff7ccf02239928d0e31b288e7589e1.mesh", "res://.godot/imported/Statue3.obj-4fff7ccf02239928d0e31b288e7589e1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bd44spv71tipr"
+path="res://.godot/imported/FlowerBed3.obj-80fc5f48fce490240c2ead57bfb65544.mesh"
+
+[deps]
+
+files=["res://.godot/imported/FlowerBed3.obj-80fc5f48fce490240c2ead57bfb65544.mesh"]
+
+source_file="res://assets/OutdoorDecorations_Pack 2/OBJ/FlowerBed3.obj"
+dest_files=["res://.godot/imported/FlowerBed3.obj-80fc5f48fce490240c2ead57bfb65544.mesh", "res://.godot/imported/FlowerBed3.obj-80fc5f48fce490240c2ead57bfb65544.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

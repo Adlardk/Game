@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://csi0335xkda6y"
+path="res://.godot/imported/Rock4.obj-2d97e135c0deda25e926d1e5f467efed.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Rock4.obj-2d97e135c0deda25e926d1e5f467efed.mesh"]
+
+source_file="res://assets/OutdoorDecorations_Pack 2/OBJ/Rock4.obj"
+dest_files=["res://.godot/imported/Rock4.obj-2d97e135c0deda25e926d1e5f467efed.mesh", "res://.godot/imported/Rock4.obj-2d97e135c0deda25e926d1e5f467efed.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

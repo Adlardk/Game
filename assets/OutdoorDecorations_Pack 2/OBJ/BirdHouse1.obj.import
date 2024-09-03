@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bxc43614q2l8g"
+path="res://.godot/imported/BirdHouse1.obj-525cf6b3f9ea2c4d962bd4cd06f586dd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BirdHouse1.obj-525cf6b3f9ea2c4d962bd4cd06f586dd.mesh"]
+
+source_file="res://assets/OutdoorDecorations_Pack 2/OBJ/BirdHouse1.obj"
+dest_files=["res://.godot/imported/BirdHouse1.obj-525cf6b3f9ea2c4d962bd4cd06f586dd.mesh", "res://.godot/imported/BirdHouse1.obj-525cf6b3f9ea2c4d962bd4cd06f586dd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
