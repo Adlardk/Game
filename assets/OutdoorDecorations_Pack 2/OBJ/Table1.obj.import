@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bp08ke1jodu38"
+path="res://.godot/imported/Table1.obj-6b5fd4ad3accd5489ba5d3edaa670bfa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Table1.obj-6b5fd4ad3accd5489ba5d3edaa670bfa.mesh"]
+
+source_file="res://assets/OutdoorDecorations_Pack 2/OBJ/Table1.obj"
+dest_files=["res://.godot/imported/Table1.obj-6b5fd4ad3accd5489ba5d3edaa670bfa.mesh", "res://.godot/imported/Table1.obj-6b5fd4ad3accd5489ba5d3edaa670bfa.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
