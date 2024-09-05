@@ -1,6 +1,8 @@
-[gd_scene load_steps=44 format=3 uid="uid://cllfgd7p8r5bk"]
+[gd_scene load_steps=50 format=3 uid="uid://cllfgd7p8r5bk"]
 
 [ext_resource type="PackedScene" uid="uid://no27b3arurrv" path="res://coin.tscn" id="1_5tpyo"]
+[ext_resource type="ArrayMesh" uid="uid://euy1ps2dv7b6" path="res://assets/Nature Kit/models/Tree_Bare_6.obj" id="1_tpiny"]
+[ext_resource type="ArrayMesh" uid="uid://d35hcpejt30i" path="res://assets/Nature Kit/models/Timber_Stack_2.obj" id="2_odh6u"]
 [ext_resource type="ArrayMesh" uid="uid://cjwjgfpeprck1" path="res://assets/Nature Kit/models/Rock_6.obj" id="2_rc5ab"]
 [ext_resource type="ArrayMesh" uid="uid://ltm5xiv74nvh" path="res://assets/Nature Kit/models/Tree_Oak_5.obj" id="3_8mkpm"]
 [ext_resource type="ArrayMesh" uid="uid://rjkupasf1aag" path="res://assets/Nature Kit/models/Tree_Oak_6.obj" id="4_p4lfk"]
@@ -16,6 +18,11 @@
 [ext_resource type="ArrayMesh" uid="uid://doun3jfk5fkl" path="res://assets/Nature Kit/models/Timber_Stack_1.obj" id="14_fh76s"]
 [ext_resource type="ArrayMesh" uid="uid://cxeepg3x83b3h" path="res://assets/Nature Kit/models/Log_5.obj" id="15_jlcff"]
 [ext_resource type="ArrayMesh" uid="uid://dsh7f12u2xd6r" path="res://assets/OutdoorDecorations_Pack 3/OBJ/WallHedge1.obj" id="16_mhxup"]
+[ext_resource type="ArrayMesh" uid="uid://730eqan8mk3w" path="res://assets/Nature Kit/models/Grass_Clump_5.obj" id="19_ys5e3"]
+[ext_resource type="ArrayMesh" uid="uid://dnvl1yvah5hq4" path="res://assets/Nature Kit/models/Grass_Clump_1.obj" id="20_36o4f"]
+[ext_resource type="ArrayMesh" uid="uid://d3tog8ux2pwqd" path="res://assets/Nature Kit/models/Grass_Clump_2.obj" id="21_slc4d"]
+[ext_resource type="ArrayMesh" uid="uid://dy7jeupwpi1j5" path="res://assets/Nature Kit/models/Grass_Clump_3.obj" id="22_2876h"]
+[ext_resource type="ArrayMesh" uid="uid://bki01nxmbr3ug" path="res://assets/Nature Kit/models/Grass_Clump_4.obj" id="23_w1es4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5o20"]
 albedo_color = Color(0.160784, 0.380392, 0.121569, 1)
@@ -184,8 +191,7 @@ _surfaces = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k261n"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_8g6eo"]
+size = Vector3(1.27448, 1.28766, 1.05511)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lb6e8"]
 data = PackedVector3Array(15, 0, 10, -15, 0, 10, 15, 0, -10, -15, 0, 10, -15, 0, -10, 15, 0, -10)
@@ -303,23 +309,25 @@ mesh = SubResource("ArrayMesh_53bvb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.99064, 0.585038, -1.39974)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Block_9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022804, -0.016417, -0.0242281)
 shape = SubResource("BoxShape3D_k261n")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Block_9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.322487, 0, 0.000423431)
-mesh = SubResource("BoxMesh_8g6eo")
-skeleton = NodePath("../../Block_6")
+[node name="TimberStack2" type="MeshInstance3D" parent="Block_9"]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -0.0709431, -0.420678, -0.0370216)
+mesh = ExtResource("14_fh76s")
+skeleton = NodePath("../..")
 
 [node name="Block_10" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13744, 0.585038, 2.0643)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.50438, 0.585038, 2.0643)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Block_10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.100288, 0.611389, 0.158203)
 shape = SubResource("BoxShape3D_k261n")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Block_10"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.322487, 0, 0.000423431)
-mesh = SubResource("BoxMesh_8g6eo")
-skeleton = NodePath("../../Block_6")
+[node name="TreeBare6" type="MeshInstance3D" parent="Block_10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.134239, -0.585038, 0.0842681)
+mesh = ExtResource("1_tpiny")
+skeleton = NodePath("../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.169944)
@@ -354,10 +362,13 @@ skeleton = NodePath("../../Block_6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.16834, 0.5, -2.014)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Block_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0758762, -0.46756, -0.282898)
 shape = SubResource("BoxShape3D_k261n")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Block_2"]
-mesh = SubResource("BoxMesh_8g6eo")
+[node name="TimberStack2" type="MeshInstance3D" parent="Block_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0327978, -0.437024, -0.341797)
+mesh = ExtResource("2_odh6u")
+skeleton = NodePath("../..")
 
 [node name="Block_3" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12227, 0.5, 7.33136)
@@ -550,3 +561,47 @@ skeleton = NodePath("../..")
 transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -6.4, 0.881, 7.60317)
 mesh = ExtResource("16_mhxup")
 skeleton = NodePath("../..")
+
+[node name="GrassClump5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31273, 9.53674e-07, 8.49583)
+mesh = ExtResource("19_ys5e3")
+
+[node name="GrassClump1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.60865, 0, 7.75002)
+mesh = ExtResource("20_36o4f")
+
+[node name="GrassClump2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7136, 9.53674e-07, 5.30843)
+mesh = ExtResource("21_slc4d")
+
+[node name="GrassClump3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49425, 0, 6.6028)
+mesh = ExtResource("22_2876h")
+
+[node name="GrassClump6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.72606, 0, 4.89473)
+mesh = ExtResource("19_ys5e3")
+
+[node name="GrassClump4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.15832, 9.53674e-07, -5.93667)
+mesh = ExtResource("21_slc4d")
+
+[node name="GrassClump7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.25548, 0, -0.961919)
+mesh = ExtResource("20_36o4f")
+
+[node name="GrassClump8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33285, 1.90735e-06, -1.70672)
+mesh = ExtResource("23_w1es4")
+
+[node name="GrassClump9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0292, 0, -1.3588)
+mesh = ExtResource("19_ys5e3")
+
+[node name="GrassClump10" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85071, 0, -8.13495)
+mesh = ExtResource("19_ys5e3")
+
+[node name="GrassClump11" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.844165, 0, -7.62905)
+mesh = ExtResource("19_ys5e3")
